@@ -1,6 +1,8 @@
 <template>
   <div class="login-box">
-    <el-row><el-col :span="8"></el-col>系统</el-row>
+    <el-row>
+      <el-col :span="8">系统</el-col>
+    </el-row>
     <el-row>
       <el-col :span="8">
         <el-input id="name" v-model="name" placeholder="请输入帐号">
@@ -36,14 +38,12 @@
 <script>
 export default {
   data() {
-    return {};
+    return { name: "", password: "" };
   },
   methods: {
-    doLogin: function(event) {
-      console.log(event);
-      console.log(this.data());
-    },
-    name: function() {}
+    doLogin: function() {
+      console.log(this.name);
+    }
   }
 };
 </script>
